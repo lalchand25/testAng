@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="scidataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tb_Company">
+          <Key>
+            <PropertyRef Name="CompanyID" />
+          </Key>
+          <Property Name="CompanyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Logopath" Type="varchar" MaxLength="50" />
+          <Property Name="Slogan" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+          <Property Name="ZipCode" Type="varchar" MaxLength="50" />
+          <Property Name="PhoneNo" Type="varchar" MaxLength="50" />
+          <Property Name="Fax" Type="varchar" MaxLength="50" />
+          <Property Name="Cell" Type="varchar" MaxLength="50" />
+          <Property Name="Website" Type="varchar" MaxLength="50" />
+          <Property Name="EmailId" Type="varchar" MaxLength="50" />
+          <Property Name="ContactPerson" Type="varchar" MaxLength="50" />
+          <Property Name="DispalyName" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="150" />
+          <Property Name="Terms" Type="bit" />
+          <Property Name="IpAddress" Type="varchar" MaxLength="50" />
+          <Property Name="LastUpdate" Type="datetime" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="DeleteStatus" Type="varchar" MaxLength="1" />
+          <Property Name="DeletedBy" Type="varchar" MaxLength="50" />
+          <Property Name="DeletionDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'scidata.dbo.tb_Enquiry' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tb_Enquiry">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ReferID" Type="int" />
+          <Property Name="EmailID" Type="varchar" MaxLength="50" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="DateOfBirth" Type="datetime" />
+          <Property Name="Gender" Type="varchar" MaxLength="15" />
+          <Property Name="Address" Type="varchar(max)" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="PostalCode" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Fax" Type="varchar" MaxLength="50" />
+          <Property Name="Cell" Type="varchar" MaxLength="50" />
+          <Property Name="EducationalQualification" Type="varchar" MaxLength="50" />
+          <Property Name="Category" Type="varchar" MaxLength="50" />
+          <Property Name="SubCategory" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaritalStatus" Type="varchar" MaxLength="50" />
+          <Property Name="PassportNumber" Type="varchar" MaxLength="50" />
+          <Property Name="DateOfIssue" Type="datetime" />
+          <Property Name="DateOfExpire" Type="datetime" />
+          <Property Name="SpouseName" Type="varchar" MaxLength="50" />
+          <Property Name="NoOfDependents" Type="int" />
+          <Property Name="BestWayContact" Type="varchar" MaxLength="50" />
+          <Property Name="OtherCategory" Type="varchar" MaxLength="50" />
+          <Property Name="EmploymentStatus" Type="varchar" MaxLength="50" />
+          <Property Name="YearsofExperience" Type="int" />
+          <Property Name="ServiceInterested" Type="varchar" MaxLength="50" />
+          <Property Name="CountryInterestedFor" Type="varchar" MaxLength="50" />
+          <Property Name="FiancialStatus" Type="varchar" MaxLength="50" />
+          <Property Name="LanguageKnown" Type="varchar" MaxLength="50" />
+          <Property Name="LanguageProfeciency" Type="varchar" MaxLength="50" />
+          <Property Name="EnglishTest" Type="varchar" MaxLength="50" />
+          <Property Name="Remarks" Type="varchar(max)" />
+          <Property Name="Score" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TermsConditions" Type="varchar(max)" />
+          <Property Name="AcceptNotAccept" Type="char" MaxLength="1" />
+          <Property Name="BusiProjectInterested" Type="varchar" MaxLength="50" />
+          <Property Name="BusiNameBusiness" Type="varchar" MaxLength="50" />
+          <Property Name="BusiTypeofBusiness" Type="varchar" MaxLength="50" />
+          <Property Name="BusiAddress" Type="varchar" MaxLength="50" />
+          <Property Name="BusiCity" Type="varchar" MaxLength="50" />
+          <Property Name="BusiState" Type="varchar" MaxLength="50" />
+          <Property Name="BusiCountry" Type="varchar" MaxLength="50" />
+          <Property Name="BusiSpace" Type="varchar" MaxLength="50" />
+          <Property Name="BusiCurrentBusinessOfficeArea" Type="varchar" MaxLength="50" />
+          <Property Name="BusiAnyOtherLandBuilForBusi" Type="varchar" MaxLength="50" />
+          <Property Name="BusiCurrentAssets" Type="varchar" MaxLength="50" />
+          <Property Name="BusiCurrentLiabilities" Type="varchar" MaxLength="50" />
+          <Property Name="BusiArrangedInvestment" Type="varchar" MaxLength="50" />
+          <Property Name="BusiSpecificProjectinformation" Type="varchar" MaxLength="50" />
+          <Property Name="BusiFax" Type="varchar" MaxLength="50" />
+          <Property Name="BusiPhone" Type="varchar" MaxLength="50" />
+          <Property Name="BusiPersonalInvestment" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SoftProjectDes" Type="varchar" MaxLength="50" />
+          <Property Name="SoftProjectName" Type="varchar" MaxLength="50" />
+          <Property Name="JobDescription" Type="varchar" MaxLength="50" />
+          <Property Name="JobTitle" Type="varchar" MaxLength="50" />
+          <Property Name="TrainingDescription" Type="varchar" MaxLength="50" />
+          <Property Name="TrainingInformation" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModificationDate" Type="datetime" />
+          <Property Name="Status" Type="varchar" MaxLength="5" />
+          <Property Name="CounteryInterested" Type="varchar" MaxLength="50" />
+          <Property Name="DeleteStatus" Type="varchar" MaxLength="1" />
+          <Property Name="DeletedBy" Type="varchar" MaxLength="50" />
+          <Property Name="DeletionDate" Type="datetime" />
+          <Property Name="OtherProgram" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityContainer Name="scidataModelStoreContainer">
+          <EntitySet Name="tb_Company" EntityType="Self.tb_Company" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Enquiry" EntityType="Self.tb_Enquiry" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tb_Enquiry].[ID] AS [ID], 
+    [tb_Enquiry].[ReferID] AS [ReferID], 
+    [tb_Enquiry].[EmailID] AS [EmailID], 
+    [tb_Enquiry].[FirstName] AS [FirstName], 
+    [tb_Enquiry].[LastName] AS [LastName], 
+    [tb_Enquiry].[DateOfBirth] AS [DateOfBirth], 
+    [tb_Enquiry].[Gender] AS [Gender], 
+    [tb_Enquiry].[Address] AS [Address], 
+    [tb_Enquiry].[Country] AS [Country], 
+    [tb_Enquiry].[State] AS [State], 
+    [tb_Enquiry].[City] AS [City], 
+    [tb_Enquiry].[PostalCode] AS [PostalCode], 
+    [tb_Enquiry].[Phone] AS [Phone], 
+    [tb_Enquiry].[Fax] AS [Fax], 
+    [tb_Enquiry].[Cell] AS [Cell], 
+    [tb_Enquiry].[EducationalQualification] AS [EducationalQualification], 
+    [tb_Enquiry].[Category] AS [Category], 
+    [tb_Enquiry].[SubCategory] AS [SubCategory], 
+    [tb_Enquiry].[MaritalStatus] AS [MaritalStatus], 
+    [tb_Enquiry].[PassportNumber] AS [PassportNumber], 
+    [tb_Enquiry].[DateOfIssue] AS [DateOfIssue], 
+    [tb_Enquiry].[DateOfExpire] AS [DateOfExpire], 
+    [tb_Enquiry].[SpouseName] AS [SpouseName], 
+    [tb_Enquiry].[NoOfDependents] AS [NoOfDependents], 
+    [tb_Enquiry].[BestWayContact] AS [BestWayContact], 
+    [tb_Enquiry].[OtherCategory] AS [OtherCategory], 
+    [tb_Enquiry].[EmploymentStatus] AS [EmploymentStatus], 
+    [tb_Enquiry].[YearsofExperience] AS [YearsofExperience], 
+    [tb_Enquiry].[ServiceInterested] AS [ServiceInterested], 
+    [tb_Enquiry].[CountryInterestedFor] AS [CountryInterestedFor], 
+    [tb_Enquiry].[FiancialStatus] AS [FiancialStatus], 
+    [tb_Enquiry].[LanguageKnown] AS [LanguageKnown], 
+    [tb_Enquiry].[LanguageProfeciency] AS [LanguageProfeciency], 
+    [tb_Enquiry].[EnglishTest] AS [EnglishTest], 
+    [tb_Enquiry].[Remarks] AS [Remarks], 
+    [tb_Enquiry].[Score] AS [Score], 
+    [tb_Enquiry].[TermsConditions] AS [TermsConditions], 
+    [tb_Enquiry].[AcceptNotAccept] AS [AcceptNotAccept], 
+    [tb_Enquiry].[BusiProjectInterested] AS [BusiProjectInterested], 
+    [tb_Enquiry].[BusiNameBusiness] AS [BusiNameBusiness], 
+    [tb_Enquiry].[BusiTypeofBusiness] AS [BusiTypeofBusiness], 
+    [tb_Enquiry].[BusiAddress] AS [BusiAddress], 
+    [tb_Enquiry].[BusiCity] AS [BusiCity], 
+    [tb_Enquiry].[BusiState] AS [BusiState], 
+    [tb_Enquiry].[BusiCountry] AS [BusiCountry], 
+    [tb_Enquiry].[BusiSpace] AS [BusiSpace], 
+    [tb_Enquiry].[BusiCurrentBusinessOfficeArea] AS [BusiCurrentBusinessOfficeArea], 
+    [tb_Enquiry].[BusiAnyOtherLandBuilForBusi] AS [BusiAnyOtherLandBuilForBusi], 
+    [tb_Enquiry].[BusiCurrentAssets] AS [BusiCurrentAssets], 
+    [tb_Enquiry].[BusiCurrentLiabilities] AS [BusiCurrentLiabilities], 
+    [tb_Enquiry].[BusiArrangedInvestment] AS [BusiArrangedInvestment], 
+    [tb_Enquiry].[BusiSpecificProjectinformation] AS [BusiSpecificProjectinformation], 
+    [tb_Enquiry].[BusiFax] AS [BusiFax], 
+    [tb_Enquiry].[BusiPhone] AS [BusiPhone], 
+    [tb_Enquiry].[BusiPersonalInvestment] AS [BusiPersonalInvestment], 
+    [tb_Enquiry].[SoftProjectDes] AS [SoftProjectDes], 
+    [tb_Enquiry].[SoftProjectName] AS [SoftProjectName], 
+    [tb_Enquiry].[JobDescription] AS [JobDescription], 
+    [tb_Enquiry].[JobTitle] AS [JobTitle], 
+    [tb_Enquiry].[TrainingDescription] AS [TrainingDescription], 
+    [tb_Enquiry].[TrainingInformation] AS [TrainingInformation], 
+    [tb_Enquiry].[CreatedBy] AS [CreatedBy], 
+    [tb_Enquiry].[CreationDate] AS [CreationDate], 
+    [tb_Enquiry].[ModifiedBy] AS [ModifiedBy], 
+    [tb_Enquiry].[ModificationDate] AS [ModificationDate], 
+    [tb_Enquiry].[Status] AS [Status], 
+    [tb_Enquiry].[CounteryInterested] AS [CounteryInterested], 
+    [tb_Enquiry].[DeleteStatus] AS [DeleteStatus], 
+    [tb_Enquiry].[DeletedBy] AS [DeletedBy], 
+    [tb_Enquiry].[DeletionDate] AS [DeletionDate], 
+    [tb_Enquiry].[OtherProgram] AS [OtherProgram]
+    FROM [dbo].[tb_Enquiry] AS [tb_Enquiry]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="scidataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tb_Enquiry">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ReferID" Type="Int32" />
+          <Property Name="EmailID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+          <Property Name="Gender" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PostalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Cell" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EducationalQualification" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SubCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MaritalStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PassportNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DateOfIssue" Type="DateTime" Precision="3" />
+          <Property Name="DateOfExpire" Type="DateTime" Precision="3" />
+          <Property Name="SpouseName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NoOfDependents" Type="Int32" />
+          <Property Name="BestWayContact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OtherCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmploymentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="YearsofExperience" Type="Int32" />
+          <Property Name="ServiceInterested" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CountryInterestedFor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FiancialStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LanguageKnown" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LanguageProfeciency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EnglishTest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Score" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TermsConditions" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AcceptNotAccept" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="BusiProjectInterested" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiNameBusiness" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiTypeofBusiness" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiSpace" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiCurrentBusinessOfficeArea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiAnyOtherLandBuilForBusi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiCurrentAssets" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiCurrentLiabilities" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiArrangedInvestment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiSpecificProjectinformation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiFax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BusiPersonalInvestment" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SoftProjectDes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SoftProjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="JobDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="JobTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TrainingDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TrainingInformation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreationDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModificationDate" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="CounteryInterested" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteStatus" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DeletedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DeletionDate" Type="DateTime" Precision="3" />
+          <Property Name="OtherProgram" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="scidataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tb_Enquiry" EntityType="Self.tb_Enquiry" />
+          <EntitySet Name="tb_Company" EntityType="scidataModel.tb_Company" />
+        </EntityContainer>
+        <EntityType Name="tb_Company">
+          <Key>
+            <PropertyRef Name="CompanyID" />
+          </Key>
+          <Property Name="CompanyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Logopath" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Slogan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ZipCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Cell" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ContactPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DispalyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Terms" Type="Boolean" />
+          <Property Name="IpAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastUpdate" Type="DateTime" Precision="3" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteStatus" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DeletedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DeletionDate" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="scidataModelStoreContainer" CdmEntityContainer="scidataEntities">
+          <EntitySetMapping Name="tb_Enquiry">
+            <EntityTypeMapping TypeName="scidataModel.tb_Enquiry">
+              <MappingFragment StoreEntitySet="tb_Enquiry">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ReferID" ColumnName="ReferID" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Cell" ColumnName="Cell" />
+                <ScalarProperty Name="EducationalQualification" ColumnName="EducationalQualification" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="SubCategory" ColumnName="SubCategory" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+                <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+                <ScalarProperty Name="DateOfExpire" ColumnName="DateOfExpire" />
+                <ScalarProperty Name="SpouseName" ColumnName="SpouseName" />
+                <ScalarProperty Name="NoOfDependents" ColumnName="NoOfDependents" />
+                <ScalarProperty Name="BestWayContact" ColumnName="BestWayContact" />
+                <ScalarProperty Name="OtherCategory" ColumnName="OtherCategory" />
+                <ScalarProperty Name="EmploymentStatus" ColumnName="EmploymentStatus" />
+                <ScalarProperty Name="YearsofExperience" ColumnName="YearsofExperience" />
+                <ScalarProperty Name="ServiceInterested" ColumnName="ServiceInterested" />
+                <ScalarProperty Name="CountryInterestedFor" ColumnName="CountryInterestedFor" />
+                <ScalarProperty Name="FiancialStatus" ColumnName="FiancialStatus" />
+                <ScalarProperty Name="LanguageKnown" ColumnName="LanguageKnown" />
+                <ScalarProperty Name="LanguageProfeciency" ColumnName="LanguageProfeciency" />
+                <ScalarProperty Name="EnglishTest" ColumnName="EnglishTest" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="TermsConditions" ColumnName="TermsConditions" />
+                <ScalarProperty Name="AcceptNotAccept" ColumnName="AcceptNotAccept" />
+                <ScalarProperty Name="BusiProjectInterested" ColumnName="BusiProjectInterested" />
+                <ScalarProperty Name="BusiNameBusiness" ColumnName="BusiNameBusiness" />
+                <ScalarProperty Name="BusiTypeofBusiness" ColumnName="BusiTypeofBusiness" />
+                <ScalarProperty Name="BusiAddress" ColumnName="BusiAddress" />
+                <ScalarProperty Name="BusiCity" ColumnName="BusiCity" />
+                <ScalarProperty Name="BusiState" ColumnName="BusiState" />
+                <ScalarProperty Name="BusiCountry" ColumnName="BusiCountry" />
+                <ScalarProperty Name="BusiSpace" ColumnName="BusiSpace" />
+                <ScalarProperty Name="BusiCurrentBusinessOfficeArea" ColumnName="BusiCurrentBusinessOfficeArea" />
+                <ScalarProperty Name="BusiAnyOtherLandBuilForBusi" ColumnName="BusiAnyOtherLandBuilForBusi" />
+                <ScalarProperty Name="BusiCurrentAssets" ColumnName="BusiCurrentAssets" />
+                <ScalarProperty Name="BusiCurrentLiabilities" ColumnName="BusiCurrentLiabilities" />
+                <ScalarProperty Name="BusiArrangedInvestment" ColumnName="BusiArrangedInvestment" />
+                <ScalarProperty Name="BusiSpecificProjectinformation" ColumnName="BusiSpecificProjectinformation" />
+                <ScalarProperty Name="BusiFax" ColumnName="BusiFax" />
+                <ScalarProperty Name="BusiPhone" ColumnName="BusiPhone" />
+                <ScalarProperty Name="BusiPersonalInvestment" ColumnName="BusiPersonalInvestment" />
+                <ScalarProperty Name="SoftProjectDes" ColumnName="SoftProjectDes" />
+                <ScalarProperty Name="SoftProjectName" ColumnName="SoftProjectName" />
+                <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="TrainingDescription" ColumnName="TrainingDescription" />
+                <ScalarProperty Name="TrainingInformation" ColumnName="TrainingInformation" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CounteryInterested" ColumnName="CounteryInterested" />
+                <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="DeletionDate" ColumnName="DeletionDate" />
+                <ScalarProperty Name="OtherProgram" ColumnName="OtherProgram" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Company">
+            <EntityTypeMapping TypeName="scidataModel.tb_Company">
+              <MappingFragment StoreEntitySet="tb_Company">
+                <ScalarProperty Name="DeletionDate" ColumnName="DeletionDate" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+                <ScalarProperty Name="Terms" ColumnName="Terms" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DispalyName" ColumnName="DispalyName" />
+                <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Cell" ColumnName="Cell" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Slogan" ColumnName="Slogan" />
+                <ScalarProperty Name="Logopath" ColumnName="Logopath" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

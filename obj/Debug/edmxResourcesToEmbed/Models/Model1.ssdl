@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="scidataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tb_Company">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Logopath" Type="varchar" MaxLength="50" />
+    <Property Name="Slogan" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="ZipCode" Type="varchar" MaxLength="50" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="50" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="Cell" Type="varchar" MaxLength="50" />
+    <Property Name="Website" Type="varchar" MaxLength="50" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="ContactPerson" Type="varchar" MaxLength="50" />
+    <Property Name="DispalyName" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="150" />
+    <Property Name="Terms" Type="bit" />
+    <Property Name="IpAddress" Type="varchar" MaxLength="50" />
+    <Property Name="LastUpdate" Type="datetime" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="DeleteStatus" Type="varchar" MaxLength="1" />
+    <Property Name="DeletedBy" Type="varchar" MaxLength="50" />
+    <Property Name="DeletionDate" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="scidataModelStoreContainer">
+    <EntitySet Name="tb_Company" EntityType="Self.tb_Company" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

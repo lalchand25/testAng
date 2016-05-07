@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="scidataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tb_Enquiry">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="ReferID" Type="Int32" />
+    <Property Name="EmailID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+    <Property Name="Gender" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cell" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EducationalQualification" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SubCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaritalStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PassportNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateOfIssue" Type="DateTime" Precision="3" />
+    <Property Name="DateOfExpire" Type="DateTime" Precision="3" />
+    <Property Name="SpouseName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NoOfDependents" Type="Int32" />
+    <Property Name="BestWayContact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OtherCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmploymentStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="YearsofExperience" Type="Int32" />
+    <Property Name="ServiceInterested" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CountryInterestedFor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FiancialStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LanguageKnown" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LanguageProfeciency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EnglishTest" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Score" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TermsConditions" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AcceptNotAccept" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="BusiProjectInterested" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiNameBusiness" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiTypeofBusiness" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiSpace" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiCurrentBusinessOfficeArea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiAnyOtherLandBuilForBusi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiCurrentAssets" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiCurrentLiabilities" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiArrangedInvestment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiSpecificProjectinformation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiFax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BusiPersonalInvestment" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SoftProjectDes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SoftProjectName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JobDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JobTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TrainingDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TrainingInformation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreationDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ModificationDate" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="CounteryInterested" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteStatus" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DeletedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeletionDate" Type="DateTime" Precision="3" />
+    <Property Name="OtherProgram" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="scidataEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_Enquiry" EntityType="Self.tb_Enquiry" />
+    <EntitySet Name="tb_Company" EntityType="scidataModel.tb_Company" />
+  </EntityContainer>
+  <EntityType Name="tb_Company">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Logopath" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Slogan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cell" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContactPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DispalyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Terms" Type="Boolean" />
+    <Property Name="IpAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastUpdate" Type="DateTime" Precision="3" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteStatus" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DeletedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeletionDate" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="scidataModelStoreContainer" CdmEntityContainer="scidataEntities">
+    <EntitySetMapping Name="tb_Enquiry">
+      <EntityTypeMapping TypeName="scidataModel.tb_Enquiry">
+        <MappingFragment StoreEntitySet="tb_Enquiry">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ReferID" ColumnName="ReferID" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Cell" ColumnName="Cell" />
+          <ScalarProperty Name="EducationalQualification" ColumnName="EducationalQualification" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="SubCategory" ColumnName="SubCategory" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+          <ScalarProperty Name="DateOfIssue" ColumnName="DateOfIssue" />
+          <ScalarProperty Name="DateOfExpire" ColumnName="DateOfExpire" />
+          <ScalarProperty Name="SpouseName" ColumnName="SpouseName" />
+          <ScalarProperty Name="NoOfDependents" ColumnName="NoOfDependents" />
+          <ScalarProperty Name="BestWayContact" ColumnName="BestWayContact" />
+          <ScalarProperty Name="OtherCategory" ColumnName="OtherCategory" />
+          <ScalarProperty Name="EmploymentStatus" ColumnName="EmploymentStatus" />
+          <ScalarProperty Name="YearsofExperience" ColumnName="YearsofExperience" />
+          <ScalarProperty Name="ServiceInterested" ColumnName="ServiceInterested" />
+          <ScalarProperty Name="CountryInterestedFor" ColumnName="CountryInterestedFor" />
+          <ScalarProperty Name="FiancialStatus" ColumnName="FiancialStatus" />
+          <ScalarProperty Name="LanguageKnown" ColumnName="LanguageKnown" />
+          <ScalarProperty Name="LanguageProfeciency" ColumnName="LanguageProfeciency" />
+          <ScalarProperty Name="EnglishTest" ColumnName="EnglishTest" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="TermsConditions" ColumnName="TermsConditions" />
+          <ScalarProperty Name="AcceptNotAccept" ColumnName="AcceptNotAccept" />
+          <ScalarProperty Name="BusiProjectInterested" ColumnName="BusiProjectInterested" />
+          <ScalarProperty Name="BusiNameBusiness" ColumnName="BusiNameBusiness" />
+          <ScalarProperty Name="BusiTypeofBusiness" ColumnName="BusiTypeofBusiness" />
+          <ScalarProperty Name="BusiAddress" ColumnName="BusiAddress" />
+          <ScalarProperty Name="BusiCity" ColumnName="BusiCity" />
+          <ScalarProperty Name="BusiState" ColumnName="BusiState" />
+          <ScalarProperty Name="BusiCountry" ColumnName="BusiCountry" />
+          <ScalarProperty Name="BusiSpace" ColumnName="BusiSpace" />
+          <ScalarProperty Name="BusiCurrentBusinessOfficeArea" ColumnName="BusiCurrentBusinessOfficeArea" />
+          <ScalarProperty Name="BusiAnyOtherLandBuilForBusi" ColumnName="BusiAnyOtherLandBuilForBusi" />
+          <ScalarProperty Name="BusiCurrentAssets" ColumnName="BusiCurrentAssets" />
+          <ScalarProperty Name="BusiCurrentLiabilities" ColumnName="BusiCurrentLiabilities" />
+          <ScalarProperty Name="BusiArrangedInvestment" ColumnName="BusiArrangedInvestment" />
+          <ScalarProperty Name="BusiSpecificProjectinformation" ColumnName="BusiSpecificProjectinformation" />
+          <ScalarProperty Name="BusiFax" ColumnName="BusiFax" />
+          <ScalarProperty Name="BusiPhone" ColumnName="BusiPhone" />
+          <ScalarProperty Name="BusiPersonalInvestment" ColumnName="BusiPersonalInvestment" />
+          <ScalarProperty Name="SoftProjectDes" ColumnName="SoftProjectDes" />
+          <ScalarProperty Name="SoftProjectName" ColumnName="SoftProjectName" />
+          <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="TrainingDescription" ColumnName="TrainingDescription" />
+          <ScalarProperty Name="TrainingInformation" ColumnName="TrainingInformation" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CounteryInterested" ColumnName="CounteryInterested" />
+          <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="DeletionDate" ColumnName="DeletionDate" />
+          <ScalarProperty Name="OtherProgram" ColumnName="OtherProgram" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Company">
+      <EntityTypeMapping TypeName="scidataModel.tb_Company">
+        <MappingFragment StoreEntitySet="tb_Company">
+          <ScalarProperty Name="DeletionDate" ColumnName="DeletionDate" />
+          <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+          <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+          <ScalarProperty Name="Terms" ColumnName="Terms" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DispalyName" ColumnName="DispalyName" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="Cell" ColumnName="Cell" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Slogan" ColumnName="Slogan" />
+          <ScalarProperty Name="Logopath" ColumnName="Logopath" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

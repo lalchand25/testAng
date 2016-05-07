@@ -1,0 +1,320 @@
+﻿
+
+
+<h2>Create Customer</h2>
+<div id="content" ng-controller="CustomerController">
+    <span ng-show="isViewLoading" class="viewLoading">
+        <img src="~/Content/images/ng-loader.gif" /> loading...
+
+    </span>
+    <div ng-class="result">
+        {{message}}
+    </div>
+    <hr />
+    <form name="frmCustomer" novalidate>
+        <div>
+            <input type="hidden" ng-model="custModel.Id" name="cid" />
+        </div>
+        <div>
+            <label for="email">
+                Customer Name
+            </label>
+            <input type="text" ng-model="custModel.Address" name="cname" placeholder="" required ng-minlength="4" ng-maxlength="14" />
+            <span class="error" ng-show="(frmCustomer.$dirty||submitted)&&frmCustomer.cname.$error.required">
+                Customer name is Required
+            </span>
+            <span class="error" ng-show="frmCustomer.$dirty&&frmCustomer.cname.$error.minlength">
+                Minimum length required is 5
+            </span>
+            <span class="error" ng-show="frmCustomer.$dirty&&frmCustomer.cname.$error.maxlength">
+                Minimum length required is 15
+            </span>
+        </div>
+        <div>
+            <label for="email">
+                E-mail address
+            </label>
+            <input type="email" ng-model="custModel.EmailId" name="email" placeholder="" required />
+            <span class="error" ng-show="(frmCustomer.$dirty||submitted)&&frmCustomer.email.$error.required">
+                EmailId is Required!
+            </span>
+            <span class="error" ng-show="(frmCustomer.$dirty||submitted)&&frmCustomer.$error.email">
+                Invalid EmailId!
+            </span>
+        </div>
+        <div class="btn">
+            <input type="submit" value="Save" ng-click="saveCustomer()" ng-disabled="frmCustomer.$invalid">
+            <input type="submit" value="Update" ng-click="updateCustomer()" ng-disabled="frmCustomer.$invalid">
+        </div>
+    </form>
+    <hr />
+    <h2>All Customers</h2>
+    <table class="table table-striped">
+        <tr ng-repeat ="custModel in ListCustomer">
+            <td>{{custModel.CompanyID}}</td>
+            <td>{{custModel.Address}}</td>
+            <td>{{custModel.Cell}}</td>
+            <td>
+                <a href="#" ng-click="getCustomer(custModel)" title="Edit Record">
+                  edit  <imgsrc ="~/Content/images/edit.png" />
+                </a>
+                <a href="#" ng-click="deleteCustomer(custModel)" title="Delete Record">
+                   delete <imgsrc ="~/Content/images/erase.png" />
+                </a>
+            </td>
+            </tr>
+    </table>
+</div>
+
+@*@section JavaScript{
+
+    <script src="~/Scripts/angular.js">
+
+    </script>
+    <script src="~/ScriptsNg/CustomerController.js">
+
+    </script>
+}*@
+
+
+  
+
+
+
+    @*<div id="content" ng-controller="CustomerController">
+        <span ng-show="isViewLoading" class="viewLoading">
+            <img src="~/Content/images/ng-loader.gif" /> loading...
+        </span>
+        <div ng-class="result">{{message}}</div>
+        <hr />
+        <form ng-submit="submitForm()" name="frmCustomer">
+            <div>
+                <label for="email">Customer Name</label>
+                <input type="text" ng-model="cust.Address" name="cname" placeholder="Enter your name" requiredng-minlength="4" ng-maxlength="14" />
+                <span class="error" ng-show="(frmCustomer.$dirty||submitted)&&frmCustomer.cname.$error.required">Customer name is Required</span>
+                <span class="error" ng-show="frmCustomer.$dirty&&frmCustomer.cname.$error.minlength">Minimum length required is 5</span>
+                <span class="error" ng-show="frmCustomer.$dirty&&frmCustomer.cname.$error.maxlength">Minimum length required is 15</span>
+            </div>
+            <div>
+                <label for="email">E-mail address</label>
+                <input type="email" ng-model="cust.Cell" name="email" placeholder="Enter your Email" required />
+                <span class="error" ng-show="(frmCustomer.$dirty||submitted)&&frmCustomer.email.$error.required">EmailId is Required!</span>
+                <span class="error" ng-show="(frmCustomer.$dirty||submitted)&&frmCustomer.$error.email">Invalid EmailId!</span>
+            </div>
+            <div>
+                <input type="submit" value="Submit" ng-disabled="myForm.$invalid">
+            </div>
+        </form>
+    </div>
+
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/angular-route.min.js"></script>*@
+
+
+
+
+
+
+
+@*<script>
+
+    angular.module('myFormApp', []).
+controller('CustomerController', function ($scope, $http, $location, $window) {
+    $scope.cust = {};
+    $scope.message = '';
+    $scope.result = "color-default";
+    $scope.isViewLoading = false;
+    //get called when user submits the form  
+    $scope.submitForm = function () {
+        $scope.isViewLoading = true;
+        console.log('Form is submitted with:', $scope.cust);
+        //$http service that send or receive data from the remote server  
+        $http(
+        {
+            method: 'POST',
+            url: '/Home/CreateCustomer',
+            data: $scope.cust
+        }).success(function (data, status, headers, config) {
+            $scope.errors = [];
+            if (data.success === true) {
+                $scope.cust = {};
+                $scope.message = 'Form data Submitted!';
+                $scope.result = "color-green";
+                $location.path(data.redirectUrl);
+                $window.location.reload();
+            }
+            else {
+                $scope.errors = data.errors;
+            }
+        }).error(function (data, status, headers, config) {
+            $scope.errors = [];
+            $scope.message = 'Unexpected Error while saving data!!';
+        });
+        $scope.isViewLoading = false;
+    }
+}).config(function ($locationProvider) {
+    //default = 'false'  
+    $locationProvider.html5Mode(true);
+});
+
+</script>*@
+    
+
+<script>
+
+    angular.module('myFormApp', []).controller('CustomerController', function ($scope, $http, $location, $window) {
+        $scope.custModel = {};
+        $scope.message = '';
+        $scope.result = "color-default";
+        $scope.isViewLoading = false;
+        $scope.ListCustomer = null;
+        getallData();
+        //******=========Get All Customer=========******  
+        function getallData() {
+            //debugger;  
+            $http.get('/Home/GetAllData').success(function (data, status, headers, config) {
+                $scope.ListCustomer = data;
+            }).error(function (data, status, headers, config) {
+                $scope.errors = [];
+                $scope.message = 'Unexpected Error while saving data!!';
+                console.log($scope.message);
+            });
+        };
+        //******=========Get Single Customer=========******  
+        $scope.getCustomer = function (custModel) {
+            $http.get('/Home/GetbyID/' + custModel.CompanyID).success(function (data, status, headers, config) {
+                //debugger;  
+                $scope.custModel = data;
+                getallData();
+                console.log(data);
+            }).error(function (data, status, headers, config) {
+                $scope.errors = [];
+                $scope.message = 'Unexpected Error while saving data!!';
+                console.log($scope.message);
+            });
+        };
+        //******=========Save Customer=========******  
+        $scope.saveCustomer = function () {
+            $scope.isViewLoading = true;
+            $http(
+            {
+                method: 'POST',
+                url: '/Home/Insert',
+                data: $scope.custModel
+            }).success(function (data, status, headers, config) {
+                $scope.errors = [];
+                if (data.success === true) {
+                    $scope.message = 'Form data Saved!';
+                    $scope.result = "color-green";
+                    getallData();
+                    $scope.custModel = {};
+                    console.log(data);
+                }
+                else {
+                    $scope.errors = data.errors;
+                }
+            }).error(function (data, status, headers, config) {
+                $scope.errors = [];
+                $scope.message = 'Unexpected Error while saving data!!';
+                console.log($scope.message);
+            });
+            getallData();
+            $scope.isViewLoading = false;
+        };
+        //******=========Edit Customer=========******  
+        $scope.updateCustomer = function () {
+            //debugger;  
+            $scope.isViewLoading = true;
+            $http(
+            {
+                method: 'POST',
+                url: '/Home/Update',
+                data: $scope.custModel
+            }).success(function (data, status, headers, config) {
+                $scope.errors = [];
+                if (data.success === true) {
+                    $scope.custModel = null;
+                    $scope.message = 'Form data Updated!';
+                    $scope.result = "color-green";
+                    getallData();
+                    console.log(data);
+                }
+                else {
+                    $scope.errors = data.errors;
+                }
+            }).error(function (data, status, headers, config) {
+                $scope.errors = [];
+                $scope.message = 'Unexpected Error while saving data!!';
+                console.log($scope.message);
+            });
+            $scope.isViewLoading = false;
+        };
+        //******=========Delete Customer=========******  
+        $scope.deleteCustomer = function (custModel) {
+            //debugger;  
+            var IsConf = confirm('You are about to delete ' + custModel.CustName + '. Are you sure?');
+            if (IsConf) {
+                $http.delete('/Home/Delete/' + custModel.CompanyID).success(function (data, status, headers, config) {
+                    $scope.errors = [];
+                    if (data.success === true) {
+                        $scope.message = custModel.CustName + ' deleted from record!!';
+                        $scope.result = "color-red";
+                        getallData();
+                        console.log(data);
+                    }
+                    else {
+                        $scope.errors = data.errors;
+                    }
+                }).error(function (data, status, headers, config) {
+                    $scope.errors = [];
+                    $scope.message = 'Unexpected Error while saving data!!';
+                    console.log($scope.message);
+                });
+            }
+        };
+    }).config(function ($locationProvider) {
+        $locationProvider.html5Mode(true);
+    });
+
+
+</script>
+    <style>
+        #content label {
+            width: 150px;
+        }
+
+        #content input[type=submit] {
+            margin-left: 154px;
+            width: 120px;
+            padding: 5px 15px;
+            background: #ff6a00;
+            border: 0 none;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .color-default {
+            color: #000;
+        }
+
+        .color-red {
+            color: red;
+        }
+
+        .color-green {
+            color: green;
+        }
+
+        #content input.ng-dirty.ng-invalid {
+            border: 1px solid red;
+            background-color: #fff4f4;
+        }
+    </style>
+
+
