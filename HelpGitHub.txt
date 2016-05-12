@@ -1,0 +1,271 @@
+
+Chapter-I 1) 
+Installing on Windows  p 38
+First-Time Git Setup p 39
+Your Identity 40
+
+ $ git config --global user.name "John Doe"
+ $ git config --global user.email johndoe@example.com
+ 
+ Your Editor  p40
+
+ Checking Your Settings 41
+       $ git config --list
+Getting Help  p 42
+       $ git help config
+$ git help <verb> 
+$ git <verb> --help 
+$ man git-<verb> 
+
+Chapter II Git basic
+Initializing a Repository in an Existing Directory 43
+$ git init
+Cloning an Existing Repository
+$ git clone https://github.com/libgit2/libgit2
+$ git clone https://github.com/libgit2/libgit2 mylibgit
+Recording Changes to the Repository 45
+Checking the Status of Your Files
+$ git status
+Tracking New Files
+$ git add .
+Staging Modified Files 46
+$ git status
+Short Status 49  -
+$ git status -s   
+Ignoring Files 50
+$ cat .gitignore *.[oa] *~
+Viewing Your Staged and Unstaged Changes 51
+$ git diff
+$ git diff --staged
+$ git diff --cached
+Committing Your Changes  54 
+$ git commit
+$ git commit -m
+Skipping the Staging Area 55
+        $ git commit -a -m
+Removing Files - 56
+$ rm PROJECTS.md
+$ git status
+$ git rm --cached README
+$ git rm log/\*.log
+$ git rm \*~
+
+Moving Files  57
+
+$ git mv file_from file_to
+$ git mv README.md README $ git status
+$ mv README.md README $ git rm README.md $ git add READM
+
+Viewing the Commit History  58
+
+$ git clone https://github.com/schacon/simplegit-progit
+$ git log
+$ git log -p -2
+$ git log --stat
+$ git log --pretty=oneline
+$ git log --pretty=format:"%h - %an, %ar : %s"
+Limiting Log Output 64
+$ git log --since=2.weeks
+$ git log -Sfunction_name
+git log --pretty="%h - %s" --author=gitster --since="2008-10-01" \
+Undoing Things
+$ git commit --amend
+$ git commit -m 'initial commit' 
+$ git add forgotten_file 
+$ git commit --amend
+Unstaging a Staged File
+$ git add * 
+$ git status
+$ git reset HEAD CONTRIBUTING.md
+Unmodifying a Modified File
+$ git checkout -- CONTRIBUTING.md $ git statu
+
+
+
+
+Working with Remotes-Showing Your Remotes 68
+$ git clone https://github.com/schacon/ticgit
+$ cd ticgit
+$ git remote
+$ git remote -v
+$ cd grit 
+$ git remote -v
+Adding Remote Repositories 70 ($  git remote add origin  http://  copy link from online- this will show  error now run next command)
+
+$ git remote 
+$ git remote add pb https://github.com/paulboone/ticgit 
+$ git remote -v
+$ git fetch pb
+
+Fetching and Pulling from Your Remotes 71
+$ git fetch [remote-name]
+Pushing to Your Remotes ($ git push -u origin master)
+$ git push origin master
+Inspecting a Remote
+$ git remote show origin
+$ git remote show origin
+Removing and Renaming Remotes
+$ git remote rename pb paul
+ $ git remote
+$ git remote rm paul 
+$ git remote
+
+Tagging 74 studied 22/02/2016
+Listing Your Tags
+
+$ git tag
+$ git tag -l "v1.8.5*"
+Creating Tags
+Annotated Tags
+$ git tag -a v1.4 -m "my version 1.4"
+ $ git tag
+$ git show v1.4
+Lightweight Tags
+$ git tag v1.4-lw
+ $ git tag
+$ git show v1.4-lw
+Tagging Later
+$ git log --pretty=oneline
+$ git tag -a v1.2 9fceb02
+
+$ git tag
+$ git show v1.2
+Sharing Tags
+
+$ git push origin v1.5
+$ git push origin --tags
+
+Checking out Tags
+$ git checkout -b version2 v2.0.0
+
+Git Aliases 77
+
+$ git config --global alias.co checkout 
+$ git config --global alias.br branch 
+$ git config --global alias.ci commit 
+$ git config --global alias.st status
+$ git config --global alias.unstage 'reset HEAD --'
+
+$ git unstage fileA 
+$ git reset HEAD -- fileA
+
+
+$ git config --global alias.last 'log -1 HEAD'
+
+
+$ git last
+
+$ git config --global alias.visual '!gitk'
+
+
+
+
+
+
+
+
+
+
+Git Branching  Chapter 3 81
+
+branching - pending create -https://www.youtube.com/watch?v=uR-9NGrpU-c
+Creating a New Branch
+$ git branch testing
+$ git log --oneline --decorate
+Switching Branches
+$ git checkout testing
+do some work
+$ git commit -a -m 'made other changes'
+$ git checkout master
+Basic Branching and Merging  89
+$ git merge branch name
+
+
+Basic Branching
+$ git checkout -b iss53
+This is shorthand for:
+$ git branch iss53 
+$ git checkout iss53
+$ vim index.html
+ $ git commit -a -m 'added a new footer [issue 53]'
+$ git checkout master 
+$ git merge hotfix
+delete  branch
+$ git branch -d hotfix
+Basic Branching and Merging -89
+Basic Merging
+
+Basic Merge Conflicts 96
+$ git merge iss53
+$ git status
+
+$ git mergetool
+$ git status
+Branch Management 99
+$ git branch
+
+$ git branch -v
+
+$ git branch --merged  iss53 * master
+$ git branch --no-merged  testing
+
+Branching Workflows
+
+Remote Branches 103
+
+Pushing 109
+
+$ git push origin serverfix
+$ git fetch origin
+$ git checkout -b serverfix origin/serverfix
+
+Tracking Branches 111
+
+
+$ git checkout --track origin/serverfi
+$ git checkout serverfix
+
+$ git checkout -b sf origin/serverfix
+
+$ git branch -u origin/serverfix
+
+$ git branch -vv
+Pulling
+
+
+Deleting Remote Branches
+$ git push origin --delete serverfix
+Rebasing pending 114
+
+ 
+
+
+
+
+$ git fetch pb
+============== command from youtube
+https://www.youtube.com/watch?v=BobrPxoXUbs
+at time 20
+$ git add  .
+$ git commit -m -a 
+
+upload online
+
+$  git remote add origin  http://  copy link from online
+above will show  error now run next command
+$ git push -u origin master
+
+if error
+
+error= $ rm -f ./.git/index.lock
+
+
+
+
+
+
+
+ 
+
+
+
